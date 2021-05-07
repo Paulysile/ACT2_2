@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="Sitio Web">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="estilo1.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <div class="container">
+        <h2>Contacto</h2>
+        <form action="/procesar-formulario.html" method="GET" enctype="multipart/form-data" name="datos-contacto">
+            <div class="form-group">
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+                    <div>
+                        <p><small id="lbl_nombre" class="form-text text-danger">El usuario no puede estar vacio</small>
+                        </p>
+                    </div>
+                    <div>
+                        <p><small id="lbl_email" class="form-text text-danger">El Email no puede estar vacio</small></p>
+                    </div>
+                    <div>
+                        <p><small id="lbl_comuna" class="form-text text-danger">Debe ingresar una Ciudad</small></p>
+                    </div>
+                    <div>
+                        <p><small id="lbl_comentario" class="form-text text-danger">El comentario debe ser mayor a 50
+                            caracteres</small></p>
+                      </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="nombre">Nombre completo:<span>(Obligatorio)</span></label><br>
+                            <input type="text" class="form-control" id="txt_nombre" placeholder="Ingrese tu nombre">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="documento-id">Documento de Identificación:</label><br>
+                            <select name="documento" id="documento-id" class="form-control">
+                                <option value="1">RUT</option>
+                                <option value="2">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="num-documento">Número de documento:</label><br>
+                            <input type="text" class="form-control" id="num-documento"
+                                placeholder="Ingrese número de documento">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="telefono">Número de Teléfono:<span>(Opcional)</span></label><br>
+                            <input type="text" class="form-control" id="telefono"
+                                placeholder="Ingrese su número de telefono">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email">E-mail:<span>(Obligatorio)</span></label><br>
+                            <input type="text" class="form-control" id="txt_email" placeholder="Ingrese tu e-mail">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="ciudad">Ciudad:</label><br>
+                            <input type="text" class="form-control" id="txt_comuna" placeholder="Ciudad de residencia">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="comentario">Comentario:</label><br>
+                        <textarea class="form-control" id="txt_comentario"
+                            maxlength="300">Escriba su comentario</textarea><br>
+
+                        <button class="btn btn-success" type="button" onclick="fn_nombreVacio(), fn_correoVacio(), fn_comuna(),fn_largoComentario();">Enviar</button>
+                        <button class="btn btn-success" type="reset" onclick="fn_limpiar();">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <footer>
+    </footer>
+
+</body>
+<script src= 'script2.js'></script>
+</html>
