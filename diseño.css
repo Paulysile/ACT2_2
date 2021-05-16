@@ -1,0 +1,77 @@
+html {height:100%;
+}
+
+body{
+    background-color: rgb(35, 39, 39);
+}
+ 
+nav{
+    background-color: rgb(35, 39, 39);
+    position: fixed;        
+}
+
+.cambioColor:hover {color:yellow;}
+
+#menu{
+    
+    width: 20%;
+    height: 100%;
+
+}
+#ubicacion1 {
+    width: 20%;
+    height: 100%;
+    float: left;
+    color: whitesmoke;
+}
+
+#ubicacion2 {
+    width: 80%;
+    height: 100%;
+    float: right;
+    
+}
+#centrado1 {
+    text-align: left;
+    font-family: sans-serif;
+    color: white;
+    background-color: turquoise;
+    height: 100%;
+    padding: 1.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+#centrado2 {
+    text-align: left;
+    font-family: sans-serif;
+    color: white;
+    background-color: yellow;
+    height: 100%;
+    padding: 1.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#centrado3 {
+    text-align: left;
+    font-family: sans-serif;
+    color: white;
+    background-color: orange;
+    height: 100%;
+    padding: 1.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#centrado4 {
+    text-align: left;
+    font-family: sans-serif;
+    color: white;
+    background-color: red;
+    height: 100%;
+    padding: 1.5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
