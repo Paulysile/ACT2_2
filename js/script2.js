@@ -1,4 +1,5 @@
 fn_ocultarEtiquetas(); /* cada vez que se inicie la pagina se ejecute esta accion*/
+fn_clima();
 
 function fn_ocultarEtiquetas() { 
 
@@ -147,3 +148,17 @@ function fn_largoComentario() {
         $('#txt_comentario').addClass('is-valid');
     }
 }
+
+
+function fn_clima(){
+    $.get('https://api.libreapi.cl/weather/stations?code=330020', function (datazo){
+        var clima = datazo.data.temperature;
+        var clima2 = datazo.data.humidity;
+        var clima3 = datazo.data.yesterday.minimum.temperature;
+        console.log (clima);
+        console.log (clima2);
+
+    $('#clima').text('Temperatura: '+ clima + ' Humedad: '+ clima2+ ' T min ayer: '+ clima3);
+
+    })
+} 
